@@ -185,6 +185,14 @@ window.onload = function() {
     $(".loading-screen").remove();
 };
 
+//load images
+var imgs = [];
+var imgUrls = ["resource/walletDetailsIphone.png","resource/marketIphone.png","resource/videoCallIphone.png","resource/messagingIphone.png"];
+for (i=0;i<imgUrls.length;i++) {
+    imgs.push(new Image());
+    imgs[i].src = imgUrls[i]
+}
+
 //feature box 
 
 function addOnHover(box) {
