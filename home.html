@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>InsTest 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+    <!--Font-awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+    <!--Google Charts-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!--Animate.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="timeline-lib/timeline.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="app.css" />
+</head>
+<body>
+
+    <!--timerHeader-->
+    <div class="timer-header">
+        <div class="container text-center">
+            <!-- <div class="container-fluid"> -->
+            <div class="clock-title">
+                <h1>Our <span class="main-sale">main sale</span> starts</h1>
+                <p>1st November, 2018</p>
+            </div>
+            <div id="clockdiv">
+                <div>
+                    <span id="days">0</span>
+                    <div class="smalltext">Days</div>
+                </div>
+                <div>
+                    <span id="hours">0</span>
+                    <div class="smalltext">Hours</div>
+                </div>
+                <div>
+                    <span id="minutes">0</span>
+                    <div class="smalltext">Minutes</div>
+                </div>
+                <div>
+                    <span id="seconds">0</span>
+                    <div class="smalltext">Seconds</div>
+                </div>
+            </div>
+            <div class="clock-button-view">
+                <button class="clock-button" onclick="location.href='https://sales.instoken.io/login'">register for main sale</button>
+            </div>
+            <!--</div> End of container fluid-->
+        </div> <!--End of container-->
+    </div> <!--End of time header-->
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-sm sticky-top navbar-light nav-bar-bg" data-toggle="sticky-onscroll">
+        <div class="container">
+            <a class="navbar-brand" href="javascript:location.reload();" id="navBrand">
+                <img src="resource/instanceCoin@3x.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                <strong>Instoken</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" id="eco-nav">
+                        <span class="nav-link">Eco-System</span>
+                        <!-- <a class="nav-link" href="#">Eco-System</a> -->
+                    </li>
+                    <li class="nav-item" id="app-nav">
+                        <span class="nav-link">The app</span>
+                        <!-- <a class="nav-link" href="#">The App</a> -->
+                    </li>
+                    <li class="nav-item" id="token-nav">
+                        <span class="nav-link">Token sale</span>
+                        <!-- <a class="nav-link" href="#">Token sale</a> -->
+                    </li>
+                    <li class="nav-item" id="milestone-nav">
+                        <span class="nav-link">Milestones</span>                        
+                        <!-- <a class="nav-link" href="#">Milestones</a> -->
+                    </li>
+                    <li class="nav-item" id="team-nav">
+                        <span class="nav-link">Team</span>                        
+                        <!-- <a class="nav-link" href="#">Team</a> -->
+                    </li>
+                    <li class="nav-item d-none" id="navbar-whitepaper-button">
+                        <button class="navbar-whitepaper-btn" data-toggle="modal" data-target="#whitepaper-modal">whitepaper</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Content-->
+    <!--Home-->
+    <div class="home">
+        <div class="container">
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 hu">
+                    <div class="home-desc">
+                        <p class="home-title">Instoken</p>
+                        <p class="home-slogan">Powering the Global Services Marketplace</p>
+                        <p class="home-slogan-desc">
+                            To facilitate transactions on the Instance platform, as well as offer incentives to other eco-system stakeholders, Instance is planning a blockchain solution powered by Instoken. It provides a standardised and universal payment currency, eliminating the need for currency exchange and costly transaction fees across different economies.
+                        </p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <button class="home-video-button" data-toggle="modal" data-target="#video-modal">watch video</button>
+                            </div>
+                            <div class="col-lg-6">
+                                <button class="home-whitepaper-button" data-toggle="modal" data-target="#whitepaper-modal">whitepaper</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center align-middle">
+                    <div class="home-img-view"><img class="home-img" src="resource/homeGraphicDrawing.png"></div>
+                </div>
+            </div>
+            </div> <!--End of container-fluid-->
+        </div> <!--End of container-->
+    </div> <!--End of home-->
+
+    <!--Whitepaper modal-->
+    <div class="modal fade" id="whitepaper-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <!-- <div class="modal-header"> -->
+                <!-- <h5 class="modal-title" id="exampleModalLongTitle">Instance app</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button> -->
+            <!-- </div> -->
+            <div class="modal-body">
+                <div class="whitepaper-modal-view text-center">
+                    <h2>Official Whitepaper</h2>
+                    <hr class="style14">
+                    <a href="whitepaper/Instoken-White-Paper-English-ver3.0.pdf" target="_blank">English</a>
+                    <a href="whitepaper/Instoken-White-Paper_Chinese_v3.0.pdf" target="_blank">中文</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Video modal-->
+    <div class="modal fade" id="video-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Instance app</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/282846736" allowfullscreen></iframe>
+                </div>
+                <a class="video-link" href="https://vimeo.com/search?q=instoken" target="_blank">More videos here!</a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Ecosystem -->
+    <div class="ecosystem">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="ecosystem-text text-center">
+                    <h3 class="ecosystem-title">Explore our Eco-System</h3>
+                    <p class="ecosystem-desc">We believe that society lacks a comprehensive solution. A singular ecosystem of Services Marketplace that allows customers to browse, review, compare and evaluate credible providers, coupled with a platform that lets them visually connect in real-time, elevating the element of trust and comfort.</p>
+                    <!-- <p class="ecosystem-ques">What can the Instance App do to solve these problems?</p> -->
+                    
+                    <h3 class="eco-typewriter">
+                        <a href="" class="typewrite" data-period="2000" data-type='[ "Building a comprehensive Eco-System.", "What can the Instance App do to solve these problems?", "No geographical barriers.", "No country specific account is required.", "Protection of payment & lower transaction fee.", "Instoken as currency & elimination of fraud.", "High transparency & decentralized network to eliminate failure."]'>
+                            <span class="wrap"></span>
+                        </a>
+                    </h3>
+
+                </div>
+    
+                <div class="ecosystem-benefits">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul>
+                                <li>
+                                    <img src="resource/chevron.png" width="20" height="20">
+                                    A face-to-face conversation environment
+                                </li>
+                                <li>
+                                    <img src="resource/chevron.png" width="20" height="20">
+                                    Elimination of miscommunication & uncertainty
+                                </li>
+                                <li>
+                                    <img src="resource/chevron.png" width="20" height="20">
+                                    Video calling to increase comfort level
+                                </li>
+                                <li>
+                                    <img src="resource/chevron.png" width="20" height="20">
+                                    Instant help with no need for emails or chats
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul>
+                                <li>
+                                    <img src="resource/chevron.png" width="20" height="20">
+                                    Attachment of documents & photos for clearer presentations
+                                </li>
+                                <li>
+                                    <img src="resource/chevron.png" width="20" height="20">
+                                    Recording of call & video history
+                                </li>
+                                <li>
+                                    <img src="resource/chevron.png" width="20" height="20">
+                                    Comprehensive rating system
+                                </li>
+                                <li>
+                                    <img src="resource/chevron.png" width="20" height="20">
+                                    Blockchains of smart transactions to safeguard payment
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="ecosystem-logo">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="eco-logo-1">
+                                <img src="https://image.flaticon.com/icons/svg/1000/1000358.svg">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="eco-logo-2">
+                                <img src="https://image.flaticon.com/icons/svg/837/837872.svg">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="eco-logo-3">
+                                <img src="https://image.flaticon.com/icons/svg/732/732204.svg">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="eco-logo-4">
+                                <img src="https://image.flaticon.com/icons/svg/189/189110.svg">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="eco-logo-5">
+                                <img src="https://image.flaticon.com/icons/svg/848/848527.svg">
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="eco-logo-6">
+                                <img src="https://image.flaticon.com/icons/svg/1006/1006521.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--End of container-fluid-->
+        </div> <!--End of container-->
+    </div> <!--End of ecosystem-->
+
+    <!--Integrated app-->
+    <div class="integrated-app text-center">
+        <div class="container">
+            <div class="container-fluid">
+                    <h2 class="integrated-app-title">The World's First Integrated Services Network</h2>
+                    <p class="integrated-app-desc">The Instance App, as an aggregator of services, provides a robust
+                            platform for freelancers or gig economy workers without middlemen
+                            fees and at zero start-up costs.
+                            Aspiring entrepreneurs can market their services online without having
+                            to worry about huge overhead costs and existing businesses can
+                            leverage the Instance App to market their services to a wider audience.</p>
+
+                <div class="integrated-app-feature">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="feature-box feature-box-active" id="feature-box-1">
+                                <i class="fas fa-wallet"></i>
+                                <h4>Token Wallet</h4>
+                                <p>Instoken eliminates the shortcomings of traditional payment
+                                    modes providing a true global currency for consumers and service
+                                    providers.</p>
+                            </div>
+                            <div class="feature-box" id="feature-box-2">
+                                <i class="fas fa-business-time"></i>
+                                <h4>Service Platform</h4>
+                                <p>Instance App aims to build a healthy and thriving community, bustling with reliable service providers and endorsed
+                                        by genuine and satisfied customers.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 bgha">
+                            <div class="iphone-img-box"></div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="feature-box" id="feature-box-3">
+                                <i class="fas fa-video"></i>
+                                <h4>Video Call</h4>
+                                <p>Intuitive and fluid user experience that allows consumers to easily find service providers and interact with them with video calls.</p>
+                            </div>
+                            <div class="feature-box" id="feature-box-4">
+                                <i class="fas fa-comments"></i>
+                                <h4>Messaging</h4>
+                                <p>Attach documents and photos for clearer presentation, negotiate the right deal,
+                                    and make payment in a single mobile-enabled solution.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--End of integrated app-->
+
+    <div class="partner-view text-center">
+        <div class="container">
+            <div class="container-fluid">
+                <h2>Our partners</h2>
+                <span class="partner-cc-text">CreativeChina</span> <span><img class="partner-access-img" src="resource/access_sp@3x.png"></span>
+            </div>
+        </div>
+    </div>
+
+    <!--Benefits carousel-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        </ol>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="consumer-benefit">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img class="consumer-benefit-img" src="resource/illustrationMarketplaceImg@3x.png">
+                                </div>
+                                <div class="col-lg-6">
+                                    <h1>Benefits for <span class="benefit-title">Consumers</span></h1>
+                                    <p>Our aim is to build a healthy and thriving community, filled with reliable service providers, and endorsed by genuine and happy customers as a singular eco – system of Services Marketplace that allows customers to browse, review, compare and evaluate credible providers, coupled with a platform that lets them visually connect in real-time, elevating the element of trust and comfort.</p>
+                                    <ul>
+                                        <li>Convenience</li>
+                                        <li>Security</li>
+                                        <li>Timeliness</li>
+                                        <li>Direct Dealing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <!--End of container-fluid-->
+                    </div> <!--End of container-->
+                </div> <!--End of consumer-->
+            </div>
+
+            <div class="carousel-item">
+                <div class="merchant-benefit">
+                    <div class="container">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h1>Benefits for <span class="benefit-title">Service Providers</span></h1>
+                                    <p>Instance is a simple way to start your business and market your talents. The Instance marketplace empowers individuals or small startups to promote your business online and gain access to customers anywhere in the world from the comfort of home.</p>
+                                    <ul>
+                                        <li>Zero Cost Start-Up</li>
+                                        <li>Worldwide Audience</li>
+                                        <li>Truly Mobile</li>
+                                        <li>Customer Relationship Management</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-6">
+                                    <img class="merchant-benefit-img" src="resource/enterpriseDrawing@3x.png">
+                                </div>
+                            </div>
+                        </div> <!--End of container-fluid-->
+                    </div> <!--End of container-->
+                </div> <!--End of merchant-->
+            </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                
+            <span><i class="fas fa-angle-left" aria-hidden="true"></i></span>
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span><i class="fas fa-angle-right" aria-hidden="true"></i></span>
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+            <span class="sr-only">Next</span>
+        </a>
+    </div> <!--End of benefits carousel-->
+
+    <!--Distribution chart-->
+    <div class="distribution-chart text-center"> 
+        <div class="container">
+            <div class="container-fluid">
+                <h1>Distribution & Budget Allocation</h1>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div id="piechart" style="width: 650px; height: 400px;"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="piechart2" style="width: 650px; height: 400px;"></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--timeline-->
+    <div class="timeline-view">
+        <!-- <div class="container"> -->
+            <div class="container-fluid">
+                <div class="timeline-text text-center">
+                    <h2>Timeline and Milestones</h2>
+                    <p>Our vision is to develop a broad ecosystem powering the global services network & partners and connecting users with trusted service providers.
+                        The Instance App has a REAL and GROWING marketplace after having
+                            launched in Taiwan in early 2018, and subsequently in Malaysia in the
+                            second quarter. It is a viable, and PROVEN business concept.</p>
+                </div>
+                <div class="timeline">
+                    <ol>
+                        <li>
+                            <div>
+                                <time>2016 Oct</time> Conceptualisation
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2016 Nov</time> Instance Inc Founded
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2017 Jan</time> App Development
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2017 Aug</time> Alpha Test & Focus Group
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2017 Oct</time> Beta
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2018 Jan</time> Version 1.0 Live Test in Taiwan to gather feedback from this in-market
+                                experience to create an improved business model 
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2018 Apr</time> Partnership with Creative China Hldgs
+                                for planned expansion into the PRC
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2018 May</time> Series A US$2mil
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2018 Q2</time> On-ground marketing in
+                                Malaysia and Singapore
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2018 Q3</time> ICO Launch
+                                Version 2.0 Beta
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2018 Q4</time> Version 2.0 Commercial
+                                Adoption
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2019 Q1</time> Version 3.0 deployment with blockchain
+                                and Insta payments enabled
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <time>2019 Q2</time> Additional country rollouts in Australia,
+                                Hong Kong, Thailand, Indonesia & UK
+                            </div>
+                        </li>
+                        <li></li>
+                    </ol>
+                    
+                    <div class="arrows">
+                        <button class="arrow arrow__prev disabled" disabled>
+                            <img src="resource/prevArrow.png" alt="prev timeline arrow">
+                        </button>
+                        <button class="arrow arrow__next">
+                            <img src="resource/nextArrow.png" alt="next timeline arrow">
+                        </button>
+                    </div>
+                    
+                </div> <!--End of timeline-->
+            </div> <!--End of container-fluid-->
+        <!--</div> End of container-->
+    </div> <!--End of timelineView-->
+
+    <!--Event-->
+    <div class="event-view">
+        <div class="container">
+            <div class="container-fluid">
+                <h1 class="text-center">Our events</h1>
+                <div class="card-deck">
+
+                    <div class="card" id="card1">
+                        <img class="card-img-top" src="resource/roadshow_singapore.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">First ICO roadshow in Singapore</h5>
+                            <ul>
+                                <li class="event-card-date">May 21, 2018</li>
+                                <li class="event-card-venue">10:00 am</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="card2">
+                        <img class="card-img-top" src="resource/roadshow_penang.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">ICO Roadshow in Malaysia</h5>
+                            <ul>
+                                <li class="event-card-date">May 30, 2018</li>
+                                <li class="event-card-venue">10:00 am</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="card3">
+                        <img class="card-img-top" src="resource/roadshow_canada.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Blockchain Impact Summit</h5>
+                            <ul>
+                                <li class="event-card-date">June 4, 2018</li>
+                                <li class="event-card-venue">12:00 pm</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card" id="card4">
+                        <img class="card-img-top" src="resource/roadshow_sydney.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Emerging Technology Showcase</h5>
+                            <ul>
+                                <li class="event-card-date">June 12, 2018</li>
+                                <li class="event-card-venue">12:00 pm</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!--End of visible card deck-->
+
+                <div class="event-button-view">
+                    <button class="show-more-button" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                        More Events
+                    </button>
+                </div>
+
+                <div class="collapse" id="collapseExample">
+                    <!-- <div class="card card-body"> -->
+                        <div class="card-deck">
+
+                            <div class="card" id="card5">
+                                <img class="card-img-top" src="resource/roadshow_melbourne.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Emerging Technology Showcase 2</h5>
+                                    <ul>
+                                        <li class="event-card-date">June 14, 2018</li>
+                                        <li class="event-card-venue">12:00 pm</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card" id="card6">
+                                <img class="card-img-top" src="resource/roadshow_london.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Emerging Companies</h5>
+                                    <ul>
+                                        <li class="event-card-date">June 21, 2018</li>
+                                        <li class="event-card-venue">10:00 am</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card" id="card7">
+                                <img class="card-img-top" src="resource/roadshow_thailand.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Roadshow in Thailand</h5>
+                                    <ul>
+                                        <li class="event-card-date">July 4, 2018</li>
+                                        <li class="event-card-venue">10:00 am</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card" id="card8">
+                                <img class="card-img-top" src="resource/roadshow_malaysia.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">Roadshow in Malaysia 2</h5>
+                                    <ul>
+                                        <li class="event-card-date">August 8, 2018</li>
+                                        <li class="event-card-venue">11:00 am</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <!--End of card deck-->
+                    <!--</div> End of card-body-->
+                </div> <!--End of collapse-->
+            </div> <!--End of container-fluid-->
+        </div> <!--End of container-->
+    </div> <!--End of eventview-->
+
+    <!--Moving banner-->
+    <div class="moving-banner-view">
+       <!-- <div class="container"> -->
+            <div class="banner-text slide-right">
+                <p>
+                    <span class="banner-news">latest news: </span>
+                    <a href="https://medium.com/@Instoken/instoken-payment-protocol-d56fdf601e35" target="_blank">Instoken Payment Protocol </a>
+                    <a href="https://medium.com/@Instoken/gigging-right-away-with-instance-app-9ee23c19f2e3" target="_blank">Why choose Instance App? </a>
+                    <a href="https://sales.instoken.io/login">Subscribe to instoken </a>
+                    <a href="whitepaper/Instoken-White-Paper-English-ver3.0.pdf" target="_blank">Read more about us! </a>
+                </p>
+             </div>
+        <!-- </div> -->
+    </div>
+
+    <!--Team members-->
+    <div class="team-member-view">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="team-title text-center">
+                    <h2>Meet our brilliant minds</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="team-member-profile text-center">
+                            <img class="team-member-img" src="resource/Ben.png" data-toggle="modal" data-target="#ben-modal">
+                            <h3>Ben Ng</h3>
+                            <h4>Founder & CEO</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="team-member-profile text-center">
+                            <img class="team-member-img" src="resource/Nour.png" data-toggle="modal" data-target="#nour-modal">
+                            <h3>Nour Helmi</h3>
+                            <h4>CTO</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="team-member-profile text-center">
+                            <img class="team-member-img" src="resource/Wilson.png" data-toggle="modal" data-target="#wilson-modal">
+                            <h3>Wilson Sia</h3>
+                            <h4>Head of Product Development</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="team-member-profile text-center">
+                            <img class="team-member-img" src="resource/Fred.png" data-toggle="modal" data-target="#fred-modal">
+                            <h3>Fred Lim</h3>
+                            <h4>CFO</h4>
+                        </div>
+                    </div>
+                </div> <!--End of row one-->
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="team-member-profile text-center">
+                            <img class="team-member-img" src="resource/Jon.png" data-toggle="modal" data-target="#jon-modal">
+                            <h3>Jon Tallis</h3>
+                            <h4>Head of Marketing</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="team-member-profile text-center">
+                            <img class="team-member-img" src="resource/Adrian.png" data-toggle="modal" data-target="#adrian-modal">
+                            <h3>Adrian Lee</h3>
+                            <h4>Co – Founder, Operations Manager</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="team-member-profile text-center">
+                            <img class="team-member-img" src="resource/Joyce.png" data-toggle="modal" data-target="#joyce-modal">
+                            <h3>Joyce Goh</h3>
+                            <h4>Data Scientist</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="team-member-profile text-center">
+                            <img class="team-member-img" src="resource/Tan.png" data-toggle="modal" data-target="#tan-modal">
+                            <h3>Tan Song Kwang</h3>
+                            <h4>Corporate Governance Officer</h4>
+                        </div>
+                    </div>
+                </div> <!--End of row two-->
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="team-member-profile text-center">
+                            <img class="team-member-img" src="resource/Roy.png" data-toggle="modal" data-target="#roy-modal">
+                            <h3>Roy Ling</h3>
+                            <h4>ICO Advisor</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="team-member-profile text-center">
+                            <img class="team-member-img" src="resource/CCloo.png" data-toggle="modal" data-target="#ccloo-modal">
+                            <h3>CC Loo</h3>
+                            <h4>Legal Advisor</h4>
+                        </div>
+                    </div>
+                </div> <!--End of row three-->
+            </div> <!--End of container-fluid-->
+        </div> <!--End of container-->
+
+        <!-- Modal -->
+      <div class="modal fade" id="ben-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Ben Ng</h5>
+                  
+                  <a href="https://www.linkedin.com/in/bennginstance/"><i class="fab fa-linkedin"></i></a>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <p>Ben is the brainchild and chief architect behind Instance. He possesses a wealth of experience from a diverse background of industries making him well versed and versatile in the needs of many businesses.</p>
+                    <p>A serial entrepreneur by profession, Ben has financed numerous start-ups as well as consumer product manufacturers. He brings with him over 10 years of hands-on experience in establishing, operating and executing new businesses.</p>
+                    <p>Ben is a visionary that was once the Vice President of a publicly traded Chinese telecommunications contractor. He successfully brought the company to New York for quotation of its shares in the form of American Depository Receipts (ADRs), an industry first for a Singapore based Chinese company at that time.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="nour-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Nour Helmi</h5>
+                    <a href="https://www.linkedin.com/in/nourhelmi91/?originalSubdomain=my" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Nour possess a wealth of experience in cross platform native and hybrid development. He has successfully created his own version of MVVM on iOS, with reactive functional programming, a maintainable and extendable architecture.</p>
+                    <p>A former Lecturer from Yarmouk Private University (YPU), he was the principal analyst and architect in many leading MNCs, including YuuZoo Corporation and GoBike. Nour holds a Bachelor’s Degree in Software Engineering and Computer Science from YPU of Syria.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="wilson-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Wilson Sia</h5>
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>In 2000, he joined Tree Data Resources as the Director of IT Services and spearheaded its transition from a general IT System Integrator to a Total Event Monitoring and Management (TEMM) service provider.</p>
+                    <p>Prior to joining Instance, he was the Project Director and CIO at Mossad Solutions Pte Ltd, a Singapore based Information’s Technology Company tasked with the setup and maintenance of IT infrastructure for numerous MNCs and SMEs such as GE Medical, GE Plastics, Putzermeister Asia- Pacific, Fagioli Asia and JM Ocean Avenue.</p>
+                    <p>His role at Mossad includes the development and execution of IT strategies and plans, managing project development and budgets, overseeing technical support services and crisis management.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="fred-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Fred Lim</h5>
+                    <a href="https://www.linkedin.com/in/fred-lim-63b27925/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Fred brings with him 30 years of experience in Finance and Accounting, as well as extensive management and leadership experience at all levels.</p>
+                    <p>He previously held the position as CFO for Yuuzoo Corporation Ltd, a SGX listed entity engaged in 3rd generation social eCommerce platforms and payment solutions. Fred was formerly Executive Director and CFO of China Fanwo Public Security.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="jon-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Jon Tallis</h5>
+                    <a href="https://www.linkedin.com/in/jon-tallis/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Jon has over 20 years of extensive experience in the software & IT industry. He has spearheaded major projects in hospitality, manufacturing, finance and HR. A true product evangelist, Jon has worked with many teams in the UK to bring their products to market.</p>
+                    <p>He has a great passion for software and technology. His maintains a “Work hard, play harder” mind-set, and is one who will always celebrate a good job done. Jon holds a BA (Hons) Degree in Accounting and Business, and is our Head of Marketing.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="adrian-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Adrian Lee</h5>
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Adrian began a career in Software Development with Ark Infoware Pte. Ltd. in 1988 and became a Partner of the firm 3 years later. At Ark Infoware, he developed various Point Of Sales systems and championed several Corporate Finance reporting systems for numerous corporations accross S.E.Asia.</p>
+                    <p>In 1993, he furthered his career with BASF to assist with the expansion of their IT/IS divisions. Mr. Lee was responsible for building the BASF network infrastructure from the initial 20 sites to the current 240 Sites across Asia.</p>
+                    <p>Together with Cable and Wireless technology, Adrian won the prestigious Network World Asia award in 2003, recognizing his contribution for transforming BASF’s legacy network infrastructure to a state of the art MPLS Network in that era. Adrian holds an Advance Diploma in Computer Sciences from the Australian Computer Society.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="joyce-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Joyce Goh</h5>
+                    <a href="https://www.linkedin.com/in/xing-juan-joyce-goh-458520161/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Joyce has more than a decade of experience from the Banking and Financial industry. She is highly trained in examining and evaluating financial data and conducting market research. An expert in Consumer Behaviour, Joyce is a CFA holder and graduate from Singapore's Nanyang Technological University, specialising in Actuarial Sciences.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="tan-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Tan Song Kwang</h5>
+                    <a href="https://www.linkedin.com/in/song-kwang-tan-87754a5/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Mr. Tan serves as Vice President of ICH Capital Pte Ltd. He served as Vice President of Financial Advisory at ICH Capital Pte Ltd. from 2002 to 2005. He has extensive corporate banking experience in the Asia Pacific region with special focus on China, working in various international banks including Citibank, BOC, ABOC and OCBC. His area of specialisation include real estate, trade and special project financing, debt and corporate restructuring, financial modelling and valuation, corporate finance transactions and was involved extensively in helping companies to raise funds from the capital markets. He served as Assistant Vice President of Real Estate Financing of Keppel Tat Lee Bank and OCBC from 2001 to 2002. He has been Director, Financial Advisory (Singapore and China) of Stratus Capital Pte Ltd since 2005. He has been an Independent Non-Executive Director of Creative China Holdings Limited since November 13, 2015. He served as an Independent Director of Oriental Group Ltd. (Oriental Food Holdings) from February 23, 2004 to December 27, 2016. He served as an Independent and Non Executive Director of China Paper Holdings Limited from May 15, 2012 to January 2014. He served as Non-Executive Director at Oriental Group Ltd. from February 23, 2004 to April 1, 2005 and served as its Non-Executive Independent Director since April 1, 2005. Mr. Tan obtained his Bachelor of Arts (Economics) from the National University of Singapore in 1991.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="roy-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Roy Ling</h5>
+                    <a href="https://www.linkedin.com/in/roy-ling-b99a504b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Professor Roy Ling was appointed as an ICO Advisor on June 2018. Prof. Ling has over 20 years of investment banking experience, and is currently a Managing Director at RL Capital Management. Concurrently, he also serves as an Independent Board Director at several listed companies and non-profit organizations across Asia, as an Adjunct Professor in Finance at the EDHEC Business School, and as an ICO Advisor.</p>
+                    <p>Prior to RL Capital, Prof. Ling held senior investment banking positions with JPMorgan, Lehman Brothers, Goldman Sachs and Salomon Smith Barney. Prof. Ling was a former Board Director of the CFA Society of Japan. He was honored as the Real Estate Executive of the Year by Singapore Business Review in 2016, and as one of 20 Rising Stars in Real Estate by Institutional Investor in 2008.</p>
+                    <p>Prof. Ling graduated from INSEAD with a Global EMBA and from the National University of Singapore with a Bachelors degree in Business Administration.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="ccloo-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">CC Loo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Mr. Loo was called by the Lincoln’s Inn, London, as a Barrister-at-Law in 1980, and admitted as an Advocate and Solicitor of the Supreme Court of Singapore in 1981. He has been in legal practice for more than 37 years. He founded Loo & Partners in 1985 and is currently its Managing Partner.</p>
+                    <p>Mr Loo specialises in Banking (including Syndication and Club Financing, Aircraft, Vessel and other Structured Financing, and Regulatory Compliance), Corporate Finance (including local and foreign Initial Public Offerings, Reverse Takeovers and Mergers & Acquisitions) and FinTech (including advising on the legal implications relating to blockchain technology, crypto-currencies and Initial Coin Offerings).</p>
+                    <p>In an interview granted to a regional legal publication in 2017 where Mr. Loo was asked to comment on how the legal industry should view the Fourth Industrial Revolution and FinTech, Mr. Loo responded that “Legal Practitioners who refuse to participate in the Fourth Industrial Revolution and turn a blind eye to FinTech shall do so at their own peril!”</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--End of teamMember view-->
+
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <a class="navbar-brand" href="#" id="footerBrand">
+                <img src="resource/instanceCoin@3x.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                <strong>Instoken</strong>
+            </a>
+            
+            <div class="footer-detail text-center">
+                <div class="social-icon">
+                    <a href="https://t.me/instoken_official" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.facebook.com/instoken/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.reddit.com/r/Instoken/" target="_blank"><i class="fab fa-reddit-alien"></i></a>
+                </div>
+                
+                <div class="info-link">
+                    <a href="https://sales.instoken.io/login">subscribe</i></a>
+                    <a href="" data-toggle="modal" data-target="#whitepaper-modal">whitepaper</a>
+                </div>
+
+                    <p class="address-text">Instance Technologies Ltd.
+                            69 Ubi Road 1,
+                            #06-26 Oxley BizHub 1, 
+                            Singapore 408731</p>
+                    <p class="email-text">enquiries@instoken.io</p>
+                    <p class="copyright-text">Copyright © 2018 by Instoken. All rights reserved</p>
+            </div>
+
+        </div> <!--End of container-->
+    </footer> <!--End of footer-->
+
+
+    <script src="timeline-lib/timeline.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
