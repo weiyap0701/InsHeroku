@@ -4,6 +4,12 @@ html, body {
     color: rgba(27, 47, 83, 1);
 }
 
+.loading-screen {
+    height: 100%;
+    width: 100%;
+    background: black;
+}
+
 /* Timer Header */
 .timer-header {
     /* background: rgba(26, 28, 83, 1); */

@@ -181,6 +181,8 @@ window.onload = function() {
     css.type = "text/css";
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #FF8600}";
     document.body.appendChild(css);
+
+    $(".loading-screen").remove();
 };
 
 //feature box 
