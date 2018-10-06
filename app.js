@@ -3,6 +3,12 @@ window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 }
 
+//disable scroll
+$('html, body').css({
+    overflow: 'hidden',
+    height: '100%'
+});
+
 //timer countdown
 var count = 0;
 var counter = null;
@@ -181,6 +187,12 @@ window.onload = function() {
     css.type = "text/css";
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #FF8600}";
     document.body.appendChild(css);
+
+    //enable scroll
+    $('html, body').css({
+        overflow: 'auto',
+        height: 'auto'
+    });
 
     $(".loading-screen").remove();
 };
