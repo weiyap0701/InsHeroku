@@ -71,6 +71,7 @@ $( ".clock-button-view" ).addClass('animated fadeInUp');
 
 //Sticky top nav bar
 $(document).ready(function() {
+    fadeInOutElementOnScroll();
   // Custom 
   var stickyToggle = function(sticky, stickyWrapper, scrollElement) {
     var stickyHeight = sticky.outerHeight();
@@ -173,6 +174,7 @@ TxtType.prototype.tick = function() {
 };
 
 window.onload = function() {
+    fadeInOutElementOnScroll();
     initCounter();
     var elements = document.getElementsByClassName('typewrite');
     for (var i=0; i<elements.length; i++) {
@@ -196,6 +198,30 @@ window.onload = function() {
 
     $(".loading-screen").remove();
 };
+
+//fade in and fade out element 
+function fadeInOutElementOnScroll() {
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.distribution-chart').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window + 230 > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},500);
+                $('#piechart').addClass('animated fadeInLeft');
+                $('#piechart2').addClass('animated fadeInRight');
+            }
+            
+        }); 
+    
+    });
+}
 
 //load images
 var imgs = [];
